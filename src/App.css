@@ -1,13 +1,22 @@
 .App {
   text-align: center;
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.placeHolder {
+  height: 100vh;
+  background-color: lightgray;
+  border: black solid;
 }
 
 .hidden {
-  height: 100vh;
-  background-color: rebeccapurple;
+  opacity: 0;
+  height: 50vh;
 }
 
 .show {
-  height: 100vh;
+  opacity: 1;
+  height: 50vh;
   background-color: yellow;
 }
