@@ -13,8 +13,7 @@ function App() {
 }
 
 const Observer = ({ children }) => {
-  const [setRef, visible] = useIntersect({ threshold: 0.5 });
-  console.log(visible);
+  const [setRef, visible] = useIntersect({ threshold: 0.2 });
 
   return (
     <div ref={setRef} className={`${visible ? "show" : "hidden"}`}>
@@ -26,7 +25,6 @@ const Observer = ({ children }) => {
 const useIntersect = (options) => {
   const [ref, setRef] = useState(null);
   const [visible, setVisible] = useState(false);
-  console.log(ref);
 
   useEffect(() => {
     const observer = new IntersectionObserver(([entry]) => {
